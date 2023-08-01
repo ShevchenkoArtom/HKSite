@@ -1,0 +1,40 @@
+.about {
+    padding: 128px 0 186px 0;
+    background-color: $beige2;
+    &__container {
+        @include container;
+    }
+    &__content {
+        max-width: 370px;
+        color: #FAFAFA;
+        h2 {
+            @include sectionTitle;
+        }
+        p {
+            @include usualText;
+            margin-top: 15px;
+        }
+    }
+    &__inner {
+        position: relative;
+    }
+    &__pictures {
+        position: absolute;
+        top: -78px;
+        left: 481px;
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        width: 820px;
+    }
+
+    @media (max-width:1000px) {
+        padding-bottom: 140px;
+        &__content {
+            max-width: 300px;
+        }
+        &__pictures {
+            left: 340px;
+        }
+    }
+}

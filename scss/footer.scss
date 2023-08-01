@@ -1,0 +1,51 @@
+.footer {
+    font-family: $fontComfortaa;
+    padding: 40px 0;
+    &__container {
+        @include container;
+    }
+    &__inner {
+        @include space-between;
+        ul{
+            @include space-between;
+            @include menuTetx;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        a {
+            @include transition;
+        }
+    }
+    ul {
+        justify-content: flex-start;    
+    }
+    @media (max-width:900px) {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__contacts {
+            padding-top: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        &__social {
+            margin: 0 auto;
+        }
+    }
+    @media (max-width:480px) {
+        padding: 50px 0;
+        &__inner {
+            flex-direction: column;
+            gap: 50px;
+            .menu {
+                &__list {
+                    flex-direction: column;
+                    gap: 22px;
+                }
+            }
+        }
+    }
+}

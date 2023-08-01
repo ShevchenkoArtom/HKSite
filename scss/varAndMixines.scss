@@ -1,0 +1,131 @@
+$white: #fff;
+$black: #000;
+$beige-white: #FFF8F3;
+$beige-black: #7B6152;
+$yellow: #FFBD59;
+$gray: #272727;
+$beige2: #A5978E;
+$fontYeseva: 'Yeseva One', cursive;
+$fontComfortaa: 'Comfortaa', cursive;
+
+$transition: ease .3s all 0s;
+@mixin container {
+    max-width: 1180px;
+    padding: 0 10px;
+    margin: 0 auto;
+    @media (max-width:1000px) {
+        max-width: 980px;
+    }
+    @media (max-width:768px) {
+        padding: 0 14px;
+        max-width: 668px;
+    }
+    @media (max-width:480px) {
+        max-width: 460px;
+        padding: 0 10px;
+    }
+    @media (max-width:360px) {
+        max-width: 340px;
+    }
+}
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin transition {
+    color: $black;
+    transition: $transition;
+    &:hover {
+        color: $beige-black;
+    }
+}
+
+@mixin menuTetx {
+    a {
+        @include transition;
+    }
+    font-family: Comfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+    text-transform: uppercase;
+    gap: 20px;
+
+    @media (max-width:768px) {
+        font-size: 10px;
+        line-height: 150%;
+    }
+    @media (max-width:480px) {
+        font-size: 14px;
+        line-height: normal;
+    }
+}
+
+@mixin yellowBtn {
+    padding: 20px 45px;
+    background-color: $yellow;
+    font-family: $fontComfortaa;
+    font-size: 14px;
+    font-weight: 600;
+    color: $gray;
+    border: 1px solid $yellow;
+    transition: $transition;
+    &:hover {
+        background-color: transparent;
+        color: $yellow;
+    }
+    @media (max-width:768px) {
+        padding: 14px 30px;
+    }
+    @media (max-width:480px) {
+        padding: 11px 23px;
+    }
+}
+
+@mixin h1 {
+    font-size: 30px;
+    color: $black;
+    @media (max-width:768px) {
+        font-size: 20px;
+    }
+    @media (max-width:480px) {
+        font-size: 15px;
+    }
+    @media (max-width:480px) {
+        font-size: 18px;
+    }
+}
+@mixin usualTopText {
+    font-family: $fontComfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+    @media (max-width:768px) {
+        font-size: 10px;
+        line-height: 150%;
+    }
+    @media (max-width:480px) {
+        font-size: 8px;
+    }
+
+}
+
+@mixin sectionTitle {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+}
+
+@mixin usualText {
+    font-family: $fontComfortaa;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%;
+}

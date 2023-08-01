@@ -1,0 +1,103 @@
+.top {
+    &__inner {
+        position: relative;
+    }
+    padding: 30px 0 150px 0;
+    &__container {
+        @include container;
+    }
+    h1 {
+        @include h1;
+        line-height: 116%;
+        margin-bottom: 15px;
+    }
+    p {
+        @include usualTopText;
+
+        margin-bottom: 48px;
+    }
+    &__buy {
+        @include yellowBtn;
+    }
+    &__content {
+        max-width: 371px;
+        padding: 150px 0 250px 0;
+        @media (max-width:1000px) {
+            max-width: 333px;
+            p {
+                max-width: 300px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 240px;
+    }
+    @media (max-width:1000px) {
+        &__content {
+            padding: 95px 0 70px 0;
+        }
+        &__img{
+            left: 300px;
+            &-l {
+                width: 655px;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        &__content {
+            max-width: 236px;
+            h1 {
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+        &__img {
+            left: 180px;
+        }
+    }
+
+    @media (max-width:480px) {
+        &__content {
+            padding: 90px 0 130px 0;
+            h1{
+                max-width: 179px;
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 15px;
+                max-width: 150px;
+            }
+        }
+        &__img {
+            left: 167px;
+            &-l {
+                width: 308px;
+            }
+        }
+    }
+
+    @media (max-width:360px) {
+        &__content {
+            padding: 60px 0 50px 0;
+            h1 {
+                max-width: 203px;
+            }
+            p {
+                max-width: 198px;
+            }
+        }
+        &__img {
+            left: 190px;
+            top: 20px;
+            &-l {
+                width: 187px;
+            }
+        }
+    }
+}
