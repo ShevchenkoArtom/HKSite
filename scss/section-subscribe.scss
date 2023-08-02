@@ -1,0 +1,53 @@
+.subscribe {
+    padding: 150px 0 50px 0;
+    &__container {
+        @include container;
+        background-image: url("../img/subscribe/subscribe.jpg");
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    &__inner {
+        padding: 1px;
+    }
+    &__form {
+        max-width: 664px;
+        background-color: $white;
+        padding: 74px 42px;
+        display: flex;
+        flex-direction: column;
+        margin: 112px 0 52px 0;
+        box-shadow: 0px 4px 11px 0px rgba(199, 175, 165, 0.30);
+        h2 {
+            @include sectionTitle;
+            margin-bottom: 50px;
+        }
+        input {
+            margin-top: 20px;
+            padding: 3px 0 11px 7px;
+            border-bottom: 1px solid $black;
+            font-family: $fontComfortaa;
+            &::placeholder {
+                color: #B3B3B3;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        button {
+            @include yellowBtn;
+            margin-top: 50px;
+            padding: 17px 34px;
+            max-width: 170px;
+            text-align: center;
+        }
+    }
+    @media (max-width:1150px) {
+        &__container {
+            background-size: 335px;
+        }
+        &__form {
+            padding: 75px 22px;
+            max-width: 440px;
+        }
+    }
+}

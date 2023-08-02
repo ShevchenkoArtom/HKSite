@@ -15,10 +15,24 @@
             margin-top: 15px;
         }
     }
+    &__underline {
+        height: 1px;
+        width: 100vw;
+        background-color: $beige-black;
+        position: absolute;
+        left: 391px;
+        bottom: -126px;
+        img {
+            position: absolute;
+            width: 22px;
+            top: -20px;
+            left: -20px;
+        }
+    }
     &__inner {
         position: relative;
     }
-    &__pictures {
+    &__pictures-container {
         position: absolute;
         top: -78px;
         left: 481px;
@@ -26,6 +40,10 @@
         align-items: center;
         gap: 0 20px;
         width: 820px;
+        p {
+            @include subPictureText;
+            margin-top: 10px;
+        }
     }
 
     @media (max-width:1000px) {
@@ -33,8 +51,96 @@
         &__content {
             max-width: 300px;
         }
-        &__pictures {
+        &__pictures-container {
             left: 340px;
+        }
+        &__underline {
+            left: 320px;
+            bottom: -81px;
+            img {
+                width: 24px;
+                top: -22px;
+                left: -22px;
+            }
+        }
+    }
+    @media (max-width:768px) {
+        padding: 50px 0 120px 0;
+        &__content {
+            max-width: 200px;
+            h2 {
+                padding-bottom: 10px;
+            }
+            p {
+                margin-top: 10px;
+            }
+        }
+        &__pictures-container {
+            top: 0;
+            left: 240px;
+            .about__picture {
+                max-width: 120px;
+                &._big-picture {
+                    max-width: 190px;
+                }
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        &__underline {
+            left: 248px;
+            bottom: -30px;
+        }
+    }
+    @media (max-width:480px) {
+        padding-bottom: 50px;
+        &__content {
+            max-width: 170px;
+        }
+        &__pictures-container {
+            top: 20px;
+            left: 190px;
+            gap: 0 5px;
+            align-items: self-end;
+            .about__picture {
+                max-width: 80px;
+                &._big-picture {
+                    max-width: 140px;
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+        &__underline {
+            left: 200px;
+            bottom: 0;
+        }
+    }
+    @media (max-width:360px) {
+        padding: 25px 0 39px 0;
+        &__content {
+            max-width: 235px;
+            h2 {
+                padding-bottom: 0;
+            }
+        }
+        &__pictures-container {
+            top: 14px;
+            left: 260px;
+            gap: 0 5px;
+            align-items: self-end;
+            .about__picture {
+                max-width: 80px;
+                &.dn-class {
+                    display: none;
+                }
+            }
+        } 
+        &__underline {
+            left: 270px;
+            bottom: -20px;
         }
     }
 }

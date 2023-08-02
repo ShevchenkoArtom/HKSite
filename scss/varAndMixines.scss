@@ -1,4 +1,5 @@
 $white: #fff;
+$white2: #FAFAFA;
 $black: #000;
 $beige-white: #FFF8F3;
 $beige-black: #7B6152;
@@ -120,6 +121,9 @@ $transition: ease .3s all 0s;
     font-style: normal;
     font-weight: 400;
     line-height: 115%;
+    @media (max-width:768px) {
+        font-size: 15px;
+    }
 }
 
 @mixin usualText {
@@ -128,4 +132,24 @@ $transition: ease .3s all 0s;
     font-style: normal;
     font-weight: 400;
     line-height: 114%;
+    @media (max-width:768px) {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    @media (max-width:360px) {
+        font-size: 8px;
+        line-height: 1.2;
+    }
+}
+
+@mixin subPictureText {
+    color: $white2;
+    font-family: $fontComfortaa;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    @media(max-width:768px) {
+        font-size: 6px;
+    }
 }

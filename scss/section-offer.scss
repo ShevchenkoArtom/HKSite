@@ -1,0 +1,48 @@
+.offer {
+    padding: 120px 0 120px 0;
+    background-image: url("../img/offer/offer-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+        @include container;
+        max-width: 1000px;
+    }
+    &__content {
+        @include space-between;
+        @include sectionTitle;
+        color: $white2;
+        button {
+            @include yellowBtn;
+        }
+        @media (max-width:1000px) {
+            h2 {
+                max-width: 552px;
+            }
+        }
+    }
+    @media (max-width:768px) {
+        padding: 66px 0 66px 0;
+        background-size: 120%;
+        button {
+            font-size: 12px;
+        }
+    }
+    @media (max-width:480px) {
+        padding: 42px 0 42px 0;
+        background-size: 120%;
+        h2 {
+            max-width: 210px;
+        }
+        button {
+            font-size: 8px;
+        }
+
+    }
+    @media (max-width:360px) {
+        h2 {
+            max-width: 200px;
+            font-size: 14px;
+        }
+        background-size: cover;
+    }
+}
