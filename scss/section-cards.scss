@@ -1,0 +1,50 @@
+.cards {
+    padding: 150px 0;
+    &__container {
+        @include container;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 50px;
+        h2 {
+            @include sectionTitle;
+            margin-bottom: 15px;
+        }
+        p {
+            @include usualText;
+        }
+    }
+    &__wraper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+    }
+}
+.product {
+    &__card {
+        max-width: 290px;
+        text-align: center;
+        padding: 0 7px;
+        img {
+            max-width: 274px;
+            max-height: 310px;
+            margin-bottom: 8px;
+        }
+        h3 {
+            @include subTitle;
+            margin-bottom: 16px;
+        }
+        .product__card-price {
+            @include subTitle;
+            margin-bottom: 12px;
+        }
+        .product__card-subtitle {
+            font-size: 12px;
+            margin-bottom: 27px;
+        }
+        button {
+            @include yellowBtn;
+        }
+    }
+}

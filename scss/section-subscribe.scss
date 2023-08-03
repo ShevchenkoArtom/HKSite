@@ -26,6 +26,10 @@
             padding: 3px 0 11px 7px;
             border-bottom: 1px solid $black;
             font-family: $fontComfortaa;
+            font-size: 14px;
+            @media (max-width:768px) {
+                font-size: 8px;
+            }
             &::placeholder {
                 color: #B3B3B3;
             }
@@ -43,11 +47,50 @@
     }
     @media (max-width:1150px) {
         &__container {
-            background-size: 335px;
+            background-size: 365px;
         }
         &__form {
             padding: 75px 22px;
+            max-width: 592px;
+            margin-bottom: 122px;
+        }
+    }
+    @media (max-width:1000px) {
+        &__container {
+            background-size: 335px;
+        }
+        &__form {
+            max-width: 60%;
+        }
+    }
+    @media (max-width:768px) {
+        &__container {
+           background-size: 187px;
+        }
+        &__form {
+            padding: 30px 22px;
             max-width: 440px;
+            margin: 0;
+            h2 {
+                margin-bottom: 0;
+            }
+            button {
+                margin-top: 30px;
+            }
+            @media (max-width:660px) {
+                & {
+                    max-width: 58%;
+                }
+            }
+        }
+    }
+    @media (max-width:480px)  {
+        padding: 50px 0;
+        &__container {
+            background-image: none
+        }
+        &__form {
+            max-width: 100%;
         }
     }
 }

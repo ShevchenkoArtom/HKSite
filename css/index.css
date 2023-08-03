@@ -840,6 +840,136 @@ body.lock {
   }
 }
 
+.cards {
+  padding: 150px 0;
+}
+.cards__container {
+  max-width: 1180px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .cards__container {
+    max-width: 980px;
+  }
+}
+@media (max-width: 768px) {
+  .cards__container {
+    padding: 0 14px;
+    max-width: 668px;
+  }
+}
+@media (max-width: 480px) {
+  .cards__container {
+    max-width: 460px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 360px) {
+  .cards__container {
+    max-width: 340px;
+  }
+}
+.cards__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px 2fr;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 50px;
+}
+.cards__inner h2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .cards__inner h2 {
+    font-size: 15px;
+  }
+}
+.cards__inner p {
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%;
+}
+@media (max-width: 768px) {
+  .cards__inner p {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 360px) {
+  .cards__inner p {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+}
+.cards__wraper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+}
+
+.product__card {
+  max-width: 290px;
+  text-align: center;
+  padding: 0 7px;
+}
+.product__card img {
+  max-width: 274px;
+  max-height: 310px;
+  margin-bottom: 8px;
+}
+.product__card h3 {
+  font-family: "Yeseva One", cursive;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.125;
+  margin-bottom: 16px;
+}
+.product__card .product__card-price {
+  font-family: "Yeseva One", cursive;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.125;
+  margin-bottom: 12px;
+}
+.product__card .product__card-subtitle {
+  font-size: 12px;
+  margin-bottom: 27px;
+}
+.product__card button {
+  padding: 20px 45px;
+  background-color: #FFBD59;
+  font-family: "Comfortaa", cursive;
+  font-size: 14px;
+  font-weight: 600;
+  color: #272727;
+  border: 1px solid #FFBD59;
+  -webkit-transition: ease 0.3s all 0s;
+  transition: ease 0.3s all 0s;
+}
+.product__card button:hover {
+  background-color: transparent;
+  color: #FFBD59;
+}
+@media (max-width: 768px) {
+  .product__card button {
+    padding: 14px 30px;
+  }
+}
+@media (max-width: 480px) {
+  .product__card button {
+    padding: 11px 23px;
+  }
+}
+
 .offer {
   padding: 120px 0 120px 0;
   background-image: url("../img/offer/offer-bg.webp");
@@ -1024,6 +1154,12 @@ body.lock {
   padding: 3px 0 11px 7px;
   border-bottom: 1px solid #000;
   font-family: "Comfortaa", cursive;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .subscribe__form input {
+    font-size: 8px;
+  }
 }
 .subscribe__form input::-webkit-input-placeholder {
   color: #B3B3B3;
@@ -1074,10 +1210,51 @@ body.lock {
 }
 @media (max-width: 1150px) {
   .subscribe__container {
-    background-size: 335px;
+    background-size: 365px;
   }
   .subscribe__form {
     padding: 75px 22px;
+    max-width: 592px;
+    margin-bottom: 122px;
+  }
+}
+@media (max-width: 1000px) {
+  .subscribe__container {
+    background-size: 335px;
+  }
+  .subscribe__form {
+    max-width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe__container {
+    background-size: 187px;
+  }
+  .subscribe__form {
+    padding: 30px 22px;
     max-width: 440px;
+    margin: 0;
+  }
+  .subscribe__form h2 {
+    margin-bottom: 0;
+  }
+  .subscribe__form button {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) and (max-width: 660px) {
+  .subscribe__form {
+    max-width: 58%;
+  }
+}
+@media (max-width: 480px) {
+  .subscribe {
+    padding: 50px 0;
+  }
+  .subscribe__container {
+    background-image: none;
+  }
+  .subscribe__form {
+    max-width: 100%;
   }
 }
