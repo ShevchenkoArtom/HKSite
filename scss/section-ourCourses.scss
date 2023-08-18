@@ -1,0 +1,109 @@
+.card {
+    &__top  {
+        img   {
+            width: 268px;
+            margin-bottom: 0;
+        }
+        position: relative;
+        &-inscription {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__info.courses {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        max-width: 100%;
+        h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+            font-family: $fontComfortaa;
+            margin-bottom: 23px;
+        }
+        @media (max-width:768px)  {
+            margin-top: 25px;
+            h3 {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            p {
+                font-size: 10px;
+            }
+            button {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width:768px) {
+        &__top {
+            img {
+                max-width: 180px;
+            }
+        }
+    }
+}
+
+.inscription {
+    &__text {
+        background-color: $beige-white2;
+        color: $white;
+        max-width: 100%;
+        position: relative;
+        left: 0;
+        span {
+            font-family: $fontComfortaa;
+            margin-left: 2px;
+            font-size: 10px;
+        }
+    }
+    &__title {
+        @include subPictureText;
+        font-family: $fontYeseva;
+        padding: 15px 15px 15px 10px;
+        top: 180px;
+        margin-bottom: 0;
+        @media (max-width:768px)  {
+            top: 114px;
+            max-width: 90%;
+            font-size: 9px;
+        }
+    }
+    &__date {
+        top: 200px;
+        padding: 7px 15px 7px 10px;
+        max-width: 80%;
+        @media (max-width:768px)  {
+            top: 120px;
+            font-size: 9px;
+        }
+    }
+    &__price {
+        bottom: -240px;
+        left: 180px;
+        max-width: 52%;
+        padding: 18px 18px 18px 10px;
+        @media (max-width:768px) {
+            font-size: 9px;
+            padding: 10px;
+            bottom: -130px;
+            left: 90px;
+        }
+    }
+}
+
+.card.courses {
+    @media (max-width:400px) {
+        padding-top: 40px;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+}

@@ -57,13 +57,13 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    // background: rgba(51, 51, 51, 0.10);   
-    // -webkit-box-shadow: inset 0 0 0.5vw $yellow;
+    background: rgba(51, 51, 51, 0.10);   
+    -webkit-box-shadow: inset 0 0 0.5vw $beige-black;
     background-color: transparent; /* цвет зоны отслеживания */
   }
   
   body::-webkit-scrollbar-thumb {
-    // background-color: $yellow;      /* округлось бегунка */  /* отступ вокруг бегунка */
+    background-color: $beige-black;      /* округлось бегунка */  /* отступ вокруг бегунка */
   }
 
 body {
@@ -86,4 +86,14 @@ body.lock {
         width: 100%;
         background-color: $beige-black;
     }
+}
+
+p {
+    font-family: $fontComfortaa;
+}
+.section {
+    padding-top: 200px;
+}
+.section.pn {
+    padding-top: 0;
 }

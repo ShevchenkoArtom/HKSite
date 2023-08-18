@@ -1,50 +1,151 @@
-.cards {
-    padding: 150px 0;
+.catalog {
+    padding: 200px 0 230px 0;
+    position: relative;
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 100px;
+        // grid-column: 1fr 2fr;
+    }
     &__container {
         @include container;
     }
-    &__inner {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 50px;
-        h2 {
-            @include sectionTitle;
-            margin-bottom: 15px;
-        }
-        p {
-            @include usualText;
-        }
-    }
-    &__wraper {
+    &-cards__wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 50px;
+        gap: 50px 90px;
+        @media (max-width:400px) {
+            &.course {
+                grid-template-columns: 1fr;
+                gap: 0;
+                .card {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    @media (max-width:1024px) {
+        &__content {
+            gap: 20px;
+        }
+        &-cards__wrap {
+            gap: 68px;
+        }
+    }
+    @media (max-width:768px) {
+        padding-bottom: 210px;
+        &__content {
+            gap: 30px;
+        }
+        &-cards__wrap {
+            gap: 30px 16px;
+        }
+    }
+    @media (max-width:480px){
+        padding: 50px 0 110px 0;
+        &__content {
+            display: block;
+            text-align: center;
+        }
+    }
+    &__info {
+        @media (max-width:480px){
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        @media (max-width:360px){
+            max-width: 275px;
+            margin-bottom: 25px;
+        }
+    }
+    @media (max-width:360px) {
+        &-cards__wrap {
+            gap: 40px 7px;
+        }
+    }
+
+    &__underline {
+        width: 100vw;
+        background-color: $beige-black;
+        height: 1px;
+        position: absolute;
+        bottom: 159px;
+        left: 37%;
+        img {
+            top: -20px;
+            left: -20px;
+            position: relative;
+        }
+        @media (max-width:1024px) {
+            left: 34%;
+        }
+        @media (max-width:768px) {
+            left: 39%;
+        }
+        @media (max-width:480px) {
+            left: 5%;
+            bottom: 50px;
+        }
     }
 }
-.product {
-    &__card {
-        max-width: 290px;
-        text-align: center;
-        padding: 0 7px;
+.card {
+    text-align: center;
+    max-width: 290px;
+
+    img {
+        margin-bottom: 8px;
+    }
+    &__price, h3 {
+        @include subTitle;
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+    &__subtitle {
+        @include subPictureText;
+        margin-bottom: 27px;
+        color: $black;
+    }
+    button {
+        @include yellowBtn;
+        padding: 18px 46px;
+    }
+    @media (max-width:768px) {
+        max-width: 200px;
         img {
-            max-width: 274px;
-            max-height: 310px;
+            width: 100%;
+            padding-bottom: 5px;
+        }
+        &__price, h3 {
             margin-bottom: 8px;
         }
-        h3 {
-            @include subTitle;
-            margin-bottom: 16px;
-        }
-        .product__card-price {
-            @include subTitle;
-            margin-bottom: 12px;
-        }
-        .product__card-subtitle {
-            font-size: 12px;
-            margin-bottom: 27px;
+        &__subtitle {
+            margin-bottom: 18px;
+            font-size: 8px;
         }
         button {
-            @include yellowBtn;
+            padding: 11px 26px;
+        }
+    }
+    @media (max-width:360px) {
+        max-width: 150px;
+        button {
+            font-size: 8px;
+        }
+    }
+    
+}
+
+.section {
+    &__title {
+        @include sectionTitle;
+        margin-bottom: 15px;
+        
+    }
+    &__subtitle {
+        @include usualText;
+        @media (max-width:1024px) {
+            font-size: 10px;
         }
     }
 }

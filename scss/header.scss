@@ -2,6 +2,15 @@
     padding: 4px 0;
     font-family: $fontComfortaa;
     background-color: $beige-white;
+    width: 100%;
+    left: 0;
+    top: -78px;
+    z-index: 10;
+    transition: .3s all ease-in;
+    &.fixed {
+        position: fixed;
+        transform: translateY(78px);
+    }
     .logo {
         width: 70px;
         height: 70px;

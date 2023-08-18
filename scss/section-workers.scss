@@ -1,0 +1,116 @@
+.workers {
+    background-color: $beige2;
+    padding: 50px 0 80px 0;
+    @media (max-width:1024px) {
+        padding: 50px 0;
+    }
+    &__container {
+        @include container;
+    }
+    &__content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 36px;
+        @media (max-width:1024px) {
+            gap: 10px;
+        }
+        @media (max-width:480px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__info {
+        color: $white2;
+        max-width: 372px;
+        p {
+            margin-top: 15px;
+            @include usualText;
+        }
+        @media (max-width:480px) {
+            margin: 0 auto;
+            text-align: center;
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+    }
+    &__cards-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 78px 75px;
+        @media (max-width:1024px) {
+            gap: 30px 10px;
+        }
+        @media (max-width:768px) {
+            gap: 30px 14px;
+        }
+        @media (max-width:360px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        .picture-wrap {
+            position: relative;
+            @media (max-width:768px) {
+                img {
+                    max-width: 140px;
+                }
+            }
+            @media (max-width:360px) {
+                img {
+                    max-width: 206px;
+                }
+            }
+        }
+        &-descr {
+            position: absolute;
+            bottom: 8px;
+            right: -32px;
+            background-color: $beige-black;
+            color: #fff;
+            text-align: center;
+            display: inline-block;
+            max-width: 60%;
+            padding: 14px 8px;
+            @media (max-width:1024px) {
+                right: 10px;
+                max-width: 50%;
+            }
+            @media (max-width:768px) {
+                padding: 10px 5px;
+            }
+            @media (max-width:570px) {
+                right: 0;
+                max-width: 60%;
+            }
+            @media (max-width:360px) {
+                right: 30px;
+                max-width: 140px;
+            }
+            h4 {
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+            p {
+                font-size: 11px;
+                font-family: $fontComfortaa;
+            }
+            @media (max-width:768px) {
+                h4 {
+                    font-size: 8px;
+                }
+                p {
+                    font-size: 7px;
+                }
+            }
+            @media (max-width:360px) {
+                h4 {font-size: 10px;}
+                p {font-size: 10px;}
+            }
+        }
+    }
+}
+@media (max-width:360px) {
+
+}
